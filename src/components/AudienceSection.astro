@@ -1,0 +1,33 @@
+---
+import { audienceItems } from '../data/audienceItems';
+---
+
+<section id="dla-kogo" class="section-padding bg-archiBg border-t border-black/8">
+  <div class="container-narrow">
+    <div class="max-w-2xl mb-12">
+      <span class="section-label">Dla kogo</span>
+      <h2 class="section-heading">Dla kogo jest Archimedia?</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+      {audienceItems.map((item) => (
+        <div class="card flex items-start gap-4">
+          <div class="flex-shrink-0 mt-1 w-6 h-6 rounded-full bg-archiBlue flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-archiWhite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <p class="text-sm md:text-base text-archiBlack/80 leading-relaxed">{item}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- NOT for section -->
+    <div class="bg-archiBlack rounded-2xl p-8 max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-widest text-archiWhite/40 mb-4">Ważne</p>
+      <p class="text-archiWhite/80 leading-relaxed">
+        To nie jest dla osób, które szukają tanich kliknięć, przypadkowych zasięgów albo szybkich sztuczek. Archimedia skupia się na realnych zapytaniach, rozmowach sprzedażowych i procesie, który ma prowadzić do podpisanych umów.
+      </p>
+    </div>
+  </div>
+</section>

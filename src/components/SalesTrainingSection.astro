@@ -1,0 +1,32 @@
+---
+import { salesTrainingTopics } from '../data/services';
+---
+
+<section class="section-padding bg-archiBlack">
+  <div class="container-narrow">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div>
+        <span class="text-archiBlue text-sm font-semibold uppercase tracking-widest mb-4 block">Sprzedaż</span>
+        <h2 class="section-heading text-archiWhite mb-6">
+          Sama kampania nie wystarczy, jeśli sprzedaż nie działa
+        </h2>
+        <p class="text-lg text-archiWhite/60 leading-relaxed">
+          W ramach współpracy klient może otrzymać dostęp do szkolenia sprzedażowego oraz konsultacji, na których omawiane są odbyte rozmowy sprzedażowe, najczęstsze obiekcje i sposób prowadzenia klienta do decyzji.
+        </p>
+      </div>
+
+      <div class="grid gap-3">
+        {salesTrainingTopics.map((topic) => (
+          <div class="flex items-center gap-4 bg-archiWhite/5 border border-archiWhite/10 rounded-xl px-5 py-4">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-archiBlue/20 flex items-center justify-center">
+              <svg class="w-3.5 h-3.5 text-archiBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <p class="text-sm md:text-base text-archiWhite/80 font-medium">{topic}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

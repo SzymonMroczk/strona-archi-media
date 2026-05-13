@@ -1,0 +1,59 @@
+---
+const wordOfMouth = [
+  'Niewielkie możliwości skalowania sprzedaży',
+  'Brak wpływu na to, jacy klienci trafiają do pracowni',
+  'Trudność w planowaniu kolejnych miesięcy',
+  'Brak powtarzalnego procesu',
+  'Duża zależność od przypadku',
+];
+
+const archiSystem = [
+  'Możliwość skalowania sprzedaży',
+  'Możliwość testowania komunikatów',
+  'Lepsza kontrola nad grupą docelową',
+  'Stały proces obsługi zapytań',
+  'Dane, które pomagają poprawiać sprzedaż',
+];
+---
+
+<section class="section-padding bg-archiBlack">
+  <div class="container-narrow">
+    <h2 class="section-heading text-archiWhite mb-12 text-center max-w-2xl mx-auto">
+      Czym różni się poleganie na poleceniach od systemu pozyskiwania klientów?
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Word of mouth -->
+      <div class="bg-archiWhite/5 border border-archiWhite/10 rounded-2xl p-8">
+        <p class="text-xs font-semibold uppercase tracking-widest text-archiWhite/40 mb-6">Marketing szeptany</p>
+        <ul class="flex flex-col gap-4">
+          {wordOfMouth.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 mt-1 w-4 h-4 rounded-full border border-archiWhite/20 flex items-center justify-center">
+                <span class="block w-1.5 h-1.5 rounded-full bg-archiWhite/30"></span>
+              </span>
+              <p class="text-sm md:text-base text-archiWhite/60">{item}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Archimedia system -->
+      <div class="bg-archiBlue/10 border border-archiBlue/30 rounded-2xl p-8">
+        <p class="text-xs font-semibold uppercase tracking-widest text-archiBlue mb-6">System Archimedia</p>
+        <ul class="flex flex-col gap-4">
+          {archiSystem.map((item) => (
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 mt-1 w-4 h-4 rounded-full bg-archiBlue/20 flex items-center justify-center">
+                <svg class="w-2.5 h-2.5 text-archiBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <p class="text-sm md:text-base text-archiWhite font-medium">{item}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

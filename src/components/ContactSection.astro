@@ -1,0 +1,234 @@
+---
+---
+
+<section id="kontakt" class="section-padding bg-archiBg border-t border-black/8">
+  <div class="container-narrow">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <!-- Left -->
+      <div>
+        <span class="section-label">Kontakt</span>
+        <h2 class="section-heading mb-5">Umów konsultację strategiczną</h2>
+        <p class="section-subheading mb-8">
+          Podczas konsultacji sprawdzimy, na jakim etapie jest Twoja pracownia, skąd obecnie pozyskujesz klientów, jak wygląda Twoja oferta i co można poprawić, aby zwiększyć liczbę wartościowych rozmów z potencjalnymi klientami.
+        </p>
+
+        <a
+          href="https://www.instagram.com/archi_media__"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 border-2 border-archiBlack text-archiBlack font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:bg-archiBlack hover:text-archiWhite focus:outline-none focus:ring-2 focus:ring-archiBlack focus:ring-offset-2 focus:ring-offset-archiBg"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Napisz na Instagramie
+        </a>
+      </div>
+
+      <!-- Right: Form -->
+      <div>
+        <form id="contact-form" novalidate class="flex flex-col gap-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-1.5">
+              <label for="name" class="text-sm font-semibold text-archiBlack">Imię <span class="text-archiBlue">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Jan"
+                class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors"
+              />
+              <span class="field-error text-xs text-red-600 hidden">To pole jest wymagane.</span>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label for="email" class="text-sm font-semibold text-archiBlack">Email <span class="text-archiBlue">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="jan@pracownia.pl"
+                class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors"
+              />
+              <span class="field-error text-xs text-red-600 hidden">Podaj prawidłowy adres email.</span>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-1.5">
+              <label for="phone" class="text-sm font-semibold text-archiBlack">Numer telefonu</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+48 000 000 000"
+                class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors"
+              />
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label for="studio" class="text-sm font-semibold text-archiBlack">Nazwa pracowni</label>
+              <input
+                type="text"
+                id="studio"
+                name="studio"
+                placeholder="Pracownia XYZ"
+                class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="website" class="text-sm font-semibold text-archiBlack">Instagram lub strona www</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              placeholder="@pracownia lub www.pracownia.pl"
+              class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="stage" class="text-sm font-semibold text-archiBlack">Na jakim etapie jest Twoja pracownia? <span class="text-archiBlue">*</span></label>
+            <select
+              id="stage"
+              name="stage"
+              required
+              class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors appearance-none"
+            >
+              <option value="">Wybierz opcję</option>
+              <option value="start">Dopiero zaczynam</option>
+              <option value="solo">Prowadzę samodzielną pracownię</option>
+              <option value="small-team">Mam małą pracownię z zespołem</option>
+              <option value="scaling">Chcę skalować działalność</option>
+            </select>
+            <span class="field-error text-xs text-red-600 hidden">Wybierz etap pracowni.</span>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="source" class="text-sm font-semibold text-archiBlack">Skąd obecnie pozyskujesz klientów?</label>
+            <input
+              type="text"
+              id="source"
+              name="source"
+              placeholder="Np. polecenia, Instagram, portale z projektami..."
+              class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="goal" class="text-sm font-semibold text-archiBlack">Jaki jest Twój główny cel?</label>
+            <input
+              type="text"
+              id="goal"
+              name="goal"
+              placeholder="Np. więcej zapytań, lepsza jakość klientów..."
+              class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label for="message" class="text-sm font-semibold text-archiBlack">Wiadomość</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Cokolwiek chcesz dodać..."
+              class="bg-archiWhite border border-black/20 rounded-xl px-4 py-3 text-archiBlack placeholder-archiBlack/30 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:border-transparent transition-colors resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn-primary text-base w-full justify-center"
+          >
+            Wyślij zgłoszenie
+          </button>
+        </form>
+
+        <!-- Success message -->
+        <div id="form-success" class="hidden text-center py-12">
+          <div class="w-16 h-16 bg-archiBlue/10 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-archiBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-archiBlack mb-3">Dzięki za zgłoszenie.</h3>
+          <p class="text-archiBlack/60">Wkrótce odezwę się z kolejnym krokiem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const successMsg = document.getElementById('form-success');
+
+  function showError(field: HTMLElement, show: boolean) {
+    const errorEl = field.parentElement?.querySelector('.field-error');
+    if (errorEl) {
+      errorEl.classList.toggle('hidden', !show);
+    }
+    if (show) {
+      field.classList.add('border-red-500');
+      field.classList.remove('border-black/20');
+    } else {
+      field.classList.remove('border-red-500');
+      field.classList.add('border-black/20');
+    }
+  }
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let valid = true;
+
+    const nameField = document.getElementById('name') as HTMLInputElement;
+    const emailField = document.getElementById('email') as HTMLInputElement;
+    const stageField = document.getElementById('stage') as HTMLSelectElement;
+
+    // Name validation
+    if (!nameField.value.trim()) {
+      showError(nameField, true);
+      valid = false;
+    } else {
+      showError(nameField, false);
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailField.value.trim() || !emailRegex.test(emailField.value)) {
+      showError(emailField, true);
+      valid = false;
+    } else {
+      showError(emailField, false);
+    }
+
+    // Stage validation
+    if (!stageField.value) {
+      showError(stageField, true);
+      valid = false;
+    } else {
+      showError(stageField, false);
+    }
+
+    if (valid) {
+      // TODO: Replace this block with your form submission endpoint or service (e.g. Formspree, Netlify Forms, Make.com webhook)
+      // Example: await fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+
+      form.classList.add('hidden');
+      successMsg?.classList.remove('hidden');
+    }
+  });
+
+  // Clear errors on input
+  form?.querySelectorAll('input, select, textarea').forEach((el) => {
+    el.addEventListener('input', () => {
+      showError(el as HTMLElement, false);
+    });
+  });
+</script>

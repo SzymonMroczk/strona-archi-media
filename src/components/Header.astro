@@ -1,0 +1,91 @@
+---
+---
+
+<header
+  id="site-header"
+  class="sticky top-0 z-50 bg-archiBg/95 backdrop-blur-sm border-b border-black/10 transition-all duration-300"
+>
+  <div class="container-narrow flex items-center justify-between h-16 md:h-18">
+    <!-- Logo -->
+    <a href="#" class="text-xl font-display font-bold text-archiBlack tracking-tight hover:text-archiBlue transition-colors">
+      Archimedia
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-7">
+      <a href="#problem" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Problem</a>
+      <a href="#system" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">System</a>
+      <a href="#dla-kogo" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Dla kogo</a>
+      <a href="#efekty" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Efekty</a>
+      <a href="#proces" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Proces</a>
+      <a href="#faq" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">FAQ</a>
+      <a href="#kontakt" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Kontakt</a>
+    </nav>
+
+    <!-- CTA Desktop -->
+    <a href="#kontakt" class="hidden lg:inline-flex btn-primary text-sm">
+      Umów konsultację
+    </a>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      aria-label="Otwórz menu"
+      aria-expanded="false"
+      class="lg:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-black/5 transition-colors"
+    >
+      <span class="menu-line block w-6 h-0.5 bg-archiBlack transition-all duration-300"></span>
+      <span class="menu-line block w-6 h-0.5 bg-archiBlack transition-all duration-300"></span>
+      <span class="menu-line block w-4 h-0.5 bg-archiBlack transition-all duration-300"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden hidden border-t border-black/10 bg-archiBg"
+  >
+    <nav class="container-narrow flex flex-col py-6 gap-4">
+      <a href="#problem" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Problem</a>
+      <a href="#system" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">System</a>
+      <a href="#dla-kogo" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Dla kogo</a>
+      <a href="#efekty" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Efekty</a>
+      <a href="#proces" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Proces</a>
+      <a href="#faq" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">FAQ</a>
+      <a href="#kontakt" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Kontakt</a>
+      <a href="#kontakt" class="btn-primary mt-2 text-sm w-full text-center">Umów konsultację</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const lines = document.querySelectorAll('.menu-line');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+
+    if (isOpen) {
+      lines[0]?.classList.add('translate-y-2', 'rotate-45');
+      lines[1]?.classList.add('opacity-0');
+      lines[2]?.classList.add('-translate-y-2', '-rotate-45', 'w-6');
+    } else {
+      lines[0]?.classList.remove('translate-y-2', 'rotate-45');
+      lines[1]?.classList.remove('opacity-0');
+      lines[2]?.classList.remove('-translate-y-2', '-rotate-45', 'w-6');
+    }
+  });
+
+  // Close mobile menu on nav link click
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+      lines[0]?.classList.remove('translate-y-2', 'rotate-45');
+      lines[1]?.classList.remove('opacity-0');
+      lines[2]?.classList.remove('-translate-y-2', '-rotate-45', 'w-6');
+    });
+  });
+</script>

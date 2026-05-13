@@ -1,0 +1,39 @@
+---
+const problems = [
+  'Brak stabilnego źródła zapytań',
+  'Zależność od poleceń',
+  'Rozmowy z osobami bez budżetu',
+  'Brak procesu po otrzymaniu leada',
+  'Brak kontroli nad skalowaniem sprzedaży',
+  'Brak analizy rozmów i obiekcji',
+];
+---
+
+<section id="problem" class="section-padding bg-archiBg">
+  <div class="container-narrow">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <!-- Left -->
+      <div>
+        <span class="section-label">Problem</span>
+        <h2 class="section-heading mb-6">
+          Polecenia są dobre, ale nie powinny być jedynym źródłem klientów
+        </h2>
+        <p class="section-subheading">
+          Wiele pracowni projektowania wnętrz działa od zlecenia do zlecenia. Raz zapytań jest dużo, a później zaczyna się czekanie na kolejne polecenie. Problem często nie leży w jakości projektów. Brakuje systemu, który regularnie dostarcza nowe rozmowy z potencjalnymi klientami.
+        </p>
+      </div>
+
+      <!-- Right: Problem cards -->
+      <div class="grid gap-3">
+        {problems.map((problem) => (
+          <div class="flex items-center gap-4 bg-archiWhite border border-black/10 rounded-xl px-5 py-4">
+            <div class="flex-shrink-0 w-5 h-5 rounded-full border-2 border-archiBlack/20 flex items-center justify-center">
+              <div class="w-2 h-2 rounded-full bg-archiBlack/30"></div>
+            </div>
+            <p class="text-sm md:text-base font-medium text-archiBlack">{problem}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
