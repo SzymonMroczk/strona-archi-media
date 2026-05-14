@@ -7,10 +7,13 @@
     scroll-behavior: smooth;
     background: #050608;
     color: #ffffff;
+    overflow-x: hidden;
   }
 
   body {
     margin: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: 'DM Sans', Inter, system-ui, sans-serif;
     background: #050608;
     color: #ffffff;
@@ -28,7 +31,7 @@
 
 @layer components {
   .container-narrow {
-    @apply max-w-7xl mx-auto px-5 md:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-5 md:px-8;
   }
 
   .section-padding {
