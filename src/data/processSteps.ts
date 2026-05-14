@@ -15,7 +15,7 @@ export const processSteps: ProcessStep[] = [
     number: '02',
     title: 'Strategia',
     description:
-      'Określamy grupę docelową, komunikację, formularz leadowy i sposób kwalifikowania zapytań.',
+      'Określamy grupę docelową, komunikację, formularz zgłoszeniowy i sposób kwalifikowania zapytań.',
   },
   {
     number: '03',
@@ -24,7 +24,7 @@ export const processSteps: ProcessStep[] = [
   },
   {
     number: '04',
-    title: 'Obsługa leadów',
+    title: 'Obsługa potencjalnych klientów',
     description:
       'Układamy proces kontaktu, rozmów, follow upów i kwalifikacji klientów.',
   },

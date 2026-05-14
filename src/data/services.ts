@@ -4,19 +4,19 @@ export const services: string[] = [
   'Przygotowanie komunikacji reklamowej',
   'Kampanie Meta Ads',
   'Formularze leadowe',
-  'Proces obsługi leadów',
+  'Proces obsługi potencjalnych klientów',
   'Szkolenie sprzedażowe',
   'Konsultacje sprzedażowe',
   'Analiza rozmów z klientami',
   'Rozbijanie obiekcji',
   'Automatyzacje powiadomień',
-  'CRM w arkuszu Google albo Asanie',
+  'System CRM',
   'Optymalizacja kampanii',
   'Rekomendacje rozwojowe',
 ];
 
 export const salesTrainingTopics: string[] = [
-  'Jak szybko kontaktować się z leadem',
+  'Jak szybko kontaktować się z potencjalnymi klientami',
   'Jak prowadzić pierwszą rozmowę',
   'Jak kwalifikować klienta',
   'Jak odpowiadać na obiekcje',
@@ -25,12 +25,12 @@ export const salesTrainingTopics: string[] = [
 ];
 
 export const automationItems: string[] = [
-  'Powiadomienia o nowych leadach',
-  'Arkusz Google jako prosty CRM',
+  'Powiadomienia o nowych zapytaniach',
+  'System CRM',
   'Slack jako kanał powiadomień',
   'Statusy rozmów',
   'Historia kontaktu',
   'Follow upy',
   'Wyniki sprzedaży',
-  'Analiza jakości leadów',
+  'Analiza jakości zapytań',
 ];

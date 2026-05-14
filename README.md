@@ -1,6 +1,6 @@
-# Archimedia
+# Archi Media
 
-Publiczna strona sprzedażowa dla marki Archimedia — Szymon Mroczkowski.  
+Publiczna strona sprzedażowa dla marki Archi Media — Szymon Mroczkowski.  
 Marketing w branży architektonicznej.
 
 **Stack:** Astro, TypeScript, Tailwind CSS, Cloudflare Pages

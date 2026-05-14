@@ -27,6 +27,6 @@ export const systemSteps: SystemStep[] = [
   {
     title: 'Sprzedaż',
     description:
-      'Celem nie jest sam lead. Celem jest podpisanie umowy na projekt wnętrza.',
+      'Celem nie jest samo zgłoszenie. Celem jest podpisanie umowy na projekt wnętrza.',
   },
 ];
