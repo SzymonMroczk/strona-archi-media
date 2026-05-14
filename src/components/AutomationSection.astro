@@ -2,31 +2,38 @@
 import { automationItems } from '../data/services';
 ---
 
-<section class="section-padding bg-archiBg border-t border-black/8">
+<section class="section-padding bg-archiDark text-archiWhite">
   <div class="container-narrow">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-      <!-- Items -->
-      <div class="order-2 lg:order-1">
-        <div class="grid sm:grid-cols-2 gap-3">
-          {automationItems.map((item) => (
-            <div class="card flex items-start gap-3">
-              <div class="flex-shrink-0 mt-0.5 w-5 h-5 rounded-md bg-archiBlue/10 flex items-center justify-center">
-                <div class="w-1.5 h-1.5 rounded-full bg-archiBlue"></div>
-              </div>
-              <p class="text-sm font-medium text-archiBlack">{item}</p>
+    <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <div class="relative order-2 lg:order-1">
+        <div class="absolute -inset-4 rounded-[2.5rem] bg-archiBlue/10 blur-3xl"></div>
+        <div class="relative rounded-[2.2rem] border border-archiWhite/[0.10] bg-archiWhite/[0.045] p-5 backdrop-blur md:p-7">
+          <div class="mb-5 flex items-center justify-between rounded-3xl border border-archiWhite/[0.08] bg-archiDark/70 p-4">
+            <div>
+              <p class="text-xs font-black uppercase tracking-[0.18em] text-archiWhite/40">CRM leadów</p>
+              <p class="mt-1 text-lg font-black tracking-[-0.03em] text-archiWhite">Statusy rozmów</p>
             </div>
-          ))}
+            <div class="rounded-full bg-archiBlue px-3 py-1.5 text-xs font-extrabold">Aktywne</div>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            {automationItems.map((item) => (
+              <div class="rounded-3xl border border-archiWhite/[0.08] bg-archiDark/[0.65] p-5">
+                <div class="mb-4 flex h-7 w-7 items-center justify-center rounded-full bg-archiBlue/[0.14]">
+                  <div class="h-2 w-2 rounded-full bg-archiBlue"></div>
+                </div>
+                <p class="text-sm font-bold leading-snug text-archiWhite/[0.82]">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      <!-- Text -->
       <div class="order-1 lg:order-2">
         <span class="section-label">Automatyzacje i CRM</span>
-        <h2 class="section-heading mb-6">
-          Leady nie mogą ginąć w wiadomościach
-        </h2>
-        <p class="section-subheading">
-          Archimedia pomaga uporządkować obsługę zapytań przez automatyczne powiadomienia, statusy rozmów i prosty system CRM.
+        <h2 class="section-heading-dark mb-6">Leady nie mogą ginąć w wiadomościach</h2>
+        <p class="section-subheading-dark">
+          Archimedia pomaga uporządkować obsługę zapytań przez powiadomienia, statusy rozmów, follow upy i prosty CRM dopasowany do pracy projektanta.
         </p>
       </div>
     </div>

@@ -9,27 +9,29 @@ const conditions = [
 ];
 ---
 
-<section class="py-16 bg-archiBg border-t border-black/8">
-  <div class="container-narrow">
-    <div class="max-w-3xl mx-auto bg-archiWhite border border-black/10 rounded-2xl p-8 md:p-12">
-      <span class="section-label">Warunki</span>
-      <h2 class="text-2xl md:text-3xl font-display font-bold text-archiBlack mb-5">
-        Kiedy system może działać najlepiej?
-      </h2>
-      <p class="text-archiBlack/70 leading-relaxed mb-8">
-        Najlepsze efekty pojawiają się wtedy, gdy kampania, szybki kontakt z leadem, sprzedaż i analiza rozmów działają razem. Dlatego w wybranych modelach współpracy ważne jest zaangażowanie po stronie pracowni.
-      </p>
+<section class="bg-archiDark px-5 py-10 text-archiWhite md:px-8 md:py-14">
+  <div class="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] border border-archiBlue/25 bg-archiBlue/[0.12] p-7 shadow-glow md:p-12">
+    <div class="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+      <div>
+        <span class="section-label">Warunki</span>
+        <h2 class="section-heading-dark mb-5">Kiedy system działa najlepiej?</h2>
+        <p class="section-subheading-dark">
+          Najlepsze efekty pojawiają się wtedy, gdy kampania, szybki kontakt z leadem, sprzedaż i analiza rozmów działają razem.
+        </p>
+      </div>
 
-      <ul class="flex flex-col gap-3">
+      <div class="grid gap-3 sm:grid-cols-2">
         {conditions.map((condition) => (
-          <li class="flex items-start gap-3">
-            <div class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-archiBlue/10 flex items-center justify-center">
-              <div class="w-1.5 h-1.5 rounded-full bg-archiBlue"></div>
+          <div class="rounded-3xl border border-archiWhite/[0.10] bg-archiDark/[0.45] p-5">
+            <div class="mb-4 flex h-8 w-8 items-center justify-center rounded-full bg-archiBlue">
+              <svg class="h-4 w-4 text-archiWhite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
             </div>
-            <p class="text-archiBlack/80">{condition}</p>
-          </li>
+            <p class="font-bold leading-snug text-archiWhite/[0.84]">{condition}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   </div>
 </section>

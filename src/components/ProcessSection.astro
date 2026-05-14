@@ -2,43 +2,28 @@
 import { processSteps } from '../data/processSteps';
 ---
 
-<section id="proces" class="section-padding bg-archiBg">
+<section id="proces" class="section-padding bg-archiBg text-archiBlack">
   <div class="container-narrow">
-    <div class="max-w-2xl mb-14">
-      <span class="section-label">Współpraca</span>
-      <h2 class="section-heading">Jak wygląda współpraca?</h2>
+    <div class="mb-14 max-w-3xl">
+      <span class="section-label">Proces współpracy</span>
+      <h2 class="section-heading mb-6">Najpierw diagnoza. Później wdrożenie. Potem optymalizacja.</h2>
+      <p class="section-subheading">
+        Dzięki temu nie zaczynamy od przypadkowego ustawienia kampanii, tylko od zrozumienia oferty, procesu sprzedaży i celu biznesowego pracowni.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-5 gap-6">
-      {processSteps.map((step, i) => (
-        <div class="relative flex flex-col gap-4">
-          <!-- Step number + connector -->
-          <div class="flex items-center gap-3 md:flex-col md:items-start">
-            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-archiBlue flex items-center justify-center shadow-lg shadow-archiBlue/20">
-              <span class="text-archiWhite font-bold text-sm">{step.number}</span>
+    <div class="relative grid gap-4 lg:grid-cols-5">
+      {processSteps.map((step) => (
+        <article class="group rounded-[2rem] border border-black/[0.08] bg-archiWhite p-6 shadow-card transition-transform duration-200 hover:-translate-y-1">
+          <div class="mb-8 flex items-center justify-between">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-archiBlack text-sm font-black text-archiWhite">
+              {step.number}
             </div>
-            {i < processSteps.length - 1 && (
-              <div class="flex-1 h-px bg-archiBlue/20 md:hidden"></div>
-            )}
+            <div class="hidden h-px flex-1 bg-archiBlue/25 lg:ml-5 lg:block"></div>
           </div>
-
-          <!-- Content -->
-          <div>
-            <h3 class="text-base font-semibold text-archiBlack mb-2">{step.title}</h3>
-            <p class="text-sm text-archiBlack/60 leading-relaxed">{step.description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <!-- Desktop connector line visual hint -->
-    <div class="hidden md:flex justify-between mt-2 mb-8 px-6">
-      {Array.from({ length: processSteps.length - 1 }).map(() => (
-        <div class="flex-1 flex items-center justify-center">
-          <svg class="w-5 h-5 text-archiBlue/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
+          <h3 class="mb-3 text-xl font-black tracking-[-0.04em] text-archiBlack">{step.title}</h3>
+          <p class="text-sm leading-relaxed text-archiBlack/60">{step.description}</p>
+        </article>
       ))}
     </div>
   </div>

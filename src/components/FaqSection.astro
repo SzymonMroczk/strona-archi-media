@@ -2,32 +2,26 @@
 import { faqItems } from '../data/faqItems';
 ---
 
-<section id="faq" class="section-padding bg-archiBg border-t border-black/8">
+<section id="faq" class="section-padding bg-archiCream text-archiBlack">
   <div class="container-narrow">
-    <div class="max-w-2xl mb-12">
+    <div class="mx-auto mb-12 max-w-3xl text-center">
       <span class="section-label">FAQ</span>
       <h2 class="section-heading">Najczęstsze pytania</h2>
     </div>
 
-    <div class="max-w-3xl flex flex-col gap-3" id="faq-list">
-      {faqItems.map((item, i) => (
-        <div
-          class="faq-item bg-archiWhite border border-black/10 rounded-2xl overflow-hidden"
-          data-index={i}
-        >
-          <button
-            class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-black/2 transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-archiBlue"
-            aria-expanded="false"
-          >
-            <span class="text-base font-semibold text-archiBlack">{item.question}</span>
-            <span class="flex-shrink-0 w-6 h-6 rounded-full border border-black/20 flex items-center justify-center transition-transform duration-300 faq-icon">
-              <svg class="w-3.5 h-3.5 text-archiBlack" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+    <div class="mx-auto flex max-w-4xl flex-col gap-4">
+      {faqItems.map((item) => (
+        <div class="faq-item overflow-hidden rounded-[2rem] border border-black/[0.08] bg-archiWhite shadow-card">
+          <button class="faq-trigger flex w-full items-center justify-between gap-5 p-6 text-left md:p-7" aria-expanded="false">
+            <span class="text-lg font-black tracking-[-0.03em] text-archiBlack">{item.question}</span>
+            <span class="faq-icon flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-archiBlue/[0.10] text-archiBlue transition-transform duration-300">
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 5v14M5 12h14" />
               </svg>
             </span>
           </button>
-          <div class="faq-content hidden px-6 pb-5">
-            <p class="text-archiBlack/70 leading-relaxed">{item.answer}</p>
+          <div class="faq-content hidden px-6 pb-6 md:px-7 md:pb-7">
+            <p class="leading-relaxed text-archiBlack/[0.65]">{item.answer}</p>
           </div>
         </div>
       ))}
@@ -36,28 +30,16 @@ import { faqItems } from '../data/faqItems';
 </section>
 
 <script>
-  const triggers = document.querySelectorAll<HTMLButtonElement>('.faq-trigger');
-
-  triggers.forEach((trigger) => {
+  document.querySelectorAll('.faq-trigger').forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const item = trigger.closest('.faq-item');
       const content = item?.querySelector('.faq-content');
-      const icon = trigger.querySelector('.faq-icon');
+      const icon = item?.querySelector('.faq-icon');
       const isOpen = trigger.getAttribute('aria-expanded') === 'true';
 
-      // Close all
-      triggers.forEach((t) => {
-        t.setAttribute('aria-expanded', 'false');
-        t.closest('.faq-item')?.querySelector('.faq-content')?.classList.add('hidden');
-        t.querySelector('.faq-icon')?.classList.remove('rotate-180');
-      });
-
-      // Open clicked if it was closed
-      if (!isOpen) {
-        trigger.setAttribute('aria-expanded', 'true');
-        content?.classList.remove('hidden');
-        icon?.classList.add('rotate-180');
-      }
+      trigger.setAttribute('aria-expanded', String(!isOpen));
+      content?.classList.toggle('hidden', isOpen);
+      icon?.classList.toggle('rotate-45', !isOpen);
     });
   });
 </script>

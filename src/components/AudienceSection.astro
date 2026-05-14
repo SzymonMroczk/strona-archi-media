@@ -2,32 +2,34 @@
 import { audienceItems } from '../data/audienceItems';
 ---
 
-<section id="dla-kogo" class="section-padding bg-archiBg border-t border-black/8">
+<section id="dla-kogo" class="section-padding bg-archiBg text-archiBlack">
   <div class="container-narrow">
-    <div class="max-w-2xl mb-12">
+    <div class="mb-14 max-w-3xl">
       <span class="section-label">Dla kogo</span>
-      <h2 class="section-heading">Dla kogo jest Archimedia?</h2>
+      <h2 class="section-heading mb-6">Dla pracowni, która chce przestać działać na wyczucie</h2>
+      <p class="section-subheading">
+        To nie jest rozwiązanie dla osób, które chcą tylko kilku tanich kliknięć. To proces dla tych, którzy traktują pracownię jak firmę.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {audienceItems.map((item) => (
-        <div class="card flex items-start gap-4">
-          <div class="flex-shrink-0 mt-1 w-6 h-6 rounded-full bg-archiBlue flex items-center justify-center">
-            <svg class="w-3.5 h-3.5 text-archiWhite" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+        <div class="rounded-[2rem] border border-black/[0.08] bg-archiWhite p-6 shadow-card">
+          <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-2xl bg-archiBlue/[0.10]">
+            <svg class="h-5 w-5 text-archiBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <p class="text-sm md:text-base text-archiBlack/80 leading-relaxed">{item}</p>
+          <p class="font-semibold leading-relaxed text-archiBlack/[0.74]">{item}</p>
         </div>
       ))}
-    </div>
 
-    <!-- NOT for section -->
-    <div class="bg-archiBlack rounded-2xl p-8 max-w-3xl">
-      <p class="text-xs font-semibold uppercase tracking-widest text-archiWhite/40 mb-4">Ważne</p>
-      <p class="text-archiWhite/80 leading-relaxed">
-        To nie jest dla osób, które szukają tanich kliknięć, przypadkowych zasięgów albo szybkich sztuczek. Archimedia skupia się na realnych zapytaniach, rozmowach sprzedażowych i procesie, który ma prowadzić do podpisanych umów.
-      </p>
+      <div class="rounded-[2rem] border border-archiBlue/25 bg-archiBlue/[0.10] p-6 lg:col-span-1">
+        <p class="mb-4 text-xs font-black uppercase tracking-[0.18em] text-archiBlue">Ważne</p>
+        <p class="font-semibold leading-relaxed text-archiBlack/[0.75]">
+          Współpraca ma największy sens wtedy, gdy chcesz realnie wdrażać rekomendacje i poprawiać proces sprzedaży, a nie tylko odpalić reklamę.
+        </p>
+      </div>
     </div>
   </div>
 </section>

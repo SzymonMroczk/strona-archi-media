@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,51 +5,77 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #efede6;
-    color: #000000;
+    background: #050608;
+    color: #ffffff;
   }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: #efede6;
+    margin: 0;
+    font-family: 'DM Sans', Inter, system-ui, sans-serif;
+    background: #050608;
+    color: #ffffff;
   }
 
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  ::selection {
+    background: rgba(82, 102, 233, 0.28);
+  }
 }
 
 @layer components {
-  .btn-primary {
-    @apply inline-flex items-center justify-center bg-archiBlue text-archiWhite font-semibold px-7 py-3.5 rounded-full transition-all duration-200 hover:bg-opacity-90 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-archiBlue focus:ring-offset-2 focus:ring-offset-archiBg;
-  }
-
-  .btn-secondary {
-    @apply inline-flex items-center justify-center border-2 border-archiBlack text-archiBlack font-semibold px-7 py-3.5 rounded-full transition-all duration-200 hover:bg-archiBlack hover:text-archiWhite focus:outline-none focus:ring-2 focus:ring-archiBlack focus:ring-offset-2 focus:ring-offset-archiBg;
-  }
-
-  .card {
-    @apply bg-archiWhite border border-black/10 rounded-2xl p-6;
+  .container-narrow {
+    @apply max-w-7xl mx-auto px-5 md:px-8;
   }
 
   .section-padding {
     @apply py-20 md:py-28;
   }
 
-  .container-narrow {
-    @apply max-w-6xl mx-auto px-5 md:px-8;
-  }
-
   .section-label {
-    @apply text-archiBlue text-sm font-semibold uppercase tracking-widest mb-4 block;
+    @apply inline-flex items-center rounded-full border border-archiBlue/25 bg-archiBlue/[0.10] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-archiBlue mb-5;
   }
 
   .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold leading-tight text-archiBlack;
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.055em] leading-[0.96] text-archiBlack;
+  }
+
+  .section-heading-dark {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-[-0.055em] leading-[0.96] text-archiWhite;
   }
 
   .section-subheading {
-    @apply text-lg md:text-xl text-archiBlack/70 leading-relaxed;
+    @apply text-lg md:text-xl text-archiBlack/[0.65] leading-relaxed;
+  }
+
+  .section-subheading-dark {
+    @apply text-lg md:text-xl text-archiWhite/[0.62] leading-relaxed;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-archiBlue px-7 py-4 text-sm md:text-base font-extrabold text-archiWhite shadow-glow transition-all duration-200 hover:-translate-y-0.5 hover:bg-archiBlueDark focus:outline-none focus:ring-2 focus:ring-archiBlue focus:ring-offset-2 focus:ring-offset-archiDark;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-archiWhite/[0.15] bg-archiWhite/[0.06] px-7 py-4 text-sm md:text-base font-extrabold text-archiWhite backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:bg-archiWhite/[0.11] focus:outline-none focus:ring-2 focus:ring-archiWhite/40 focus:ring-offset-2 focus:ring-offset-archiDark;
+  }
+
+  .btn-secondary-light {
+    @apply inline-flex items-center justify-center rounded-full border border-archiBlack/[0.15] bg-archiWhite px-7 py-4 text-sm md:text-base font-extrabold text-archiBlack transition-all duration-200 hover:-translate-y-0.5 hover:border-archiBlue hover:text-archiBlue hover:shadow-card focus:outline-none focus:ring-2 focus:ring-archiBlue focus:ring-offset-2 focus:ring-offset-archiBg;
+  }
+
+  .card {
+    @apply rounded-[2rem] border border-black/[0.08] bg-archiWhite p-6 shadow-card;
+  }
+
+  .dark-card {
+    @apply rounded-[2rem] border border-archiWhite/[0.10] bg-archiWhite/[0.055] p-6 backdrop-blur;
+  }
+
+  .soft-card {
+    @apply rounded-[2rem] border border-black/[0.08] bg-archiCream p-6;
   }
 }

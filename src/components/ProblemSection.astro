@@ -1,39 +1,42 @@
 ---
 const problems = [
-  'Brak stabilnego źródła zapytań',
-  'Zależność od poleceń',
-  'Rozmowy z osobami bez budżetu',
-  'Brak procesu po otrzymaniu leada',
-  'Brak kontroli nad skalowaniem sprzedaży',
-  'Brak analizy rozmów i obiekcji',
+  {
+    title: 'Polecenia są nieregularne',
+    text: 'Raz masz kilka zapytań naraz, a później przez tygodnie trudno przewidzieć, z czego przyjdzie kolejna sprzedaż.',
+  },
+  {
+    title: 'Instagram nie jest procesem sprzedaży',
+    text: 'Ładne portfolio pomaga, ale samo publikowanie nie daje kontroli nad liczbą rozmów, jakością klientów i terminami decyzji.',
+  },
+  {
+    title: 'Leady bez obsługi nie zamieniają się w umowy',
+    text: 'Klient musi dostać szybki kontakt, jasne prowadzenie rozmowy i konkretny kolejny krok. Inaczej zgłoszenie często znika.',
+  },
 ];
 ---
 
-<section id="problem" class="section-padding bg-archiBg">
+<section id="problem" class="section-padding bg-archiBg text-archiBlack">
   <div class="container-narrow">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-      <!-- Left -->
+    <div class="mb-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
       <div>
         <span class="section-label">Problem</span>
-        <h2 class="section-heading mb-6">
-          Polecenia są dobre, ale nie powinny być jedynym źródłem klientów
-        </h2>
-        <p class="section-subheading">
-          Wiele pracowni projektowania wnętrz działa od zlecenia do zlecenia. Raz zapytań jest dużo, a później zaczyna się czekanie na kolejne polecenie. Problem często nie leży w jakości projektów. Brakuje systemu, który regularnie dostarcza nowe rozmowy z potencjalnymi klientami.
-        </p>
+        <h2 class="section-heading">Sama reklama nie rozwiąże problemu sprzedaży</h2>
       </div>
+      <p class="section-subheading lg:pb-2">
+        W pracowni wnętrz klient nie kupuje impulsywnie. Potrzebujesz całego procesu, który prowadzi go od pierwszego kliknięcia do decyzji o współpracy.
+      </p>
+    </div>
 
-      <!-- Right: Problem cards -->
-      <div class="grid gap-3">
-        {problems.map((problem) => (
-          <div class="flex items-center gap-4 bg-archiWhite border border-black/10 rounded-xl px-5 py-4">
-            <div class="flex-shrink-0 w-5 h-5 rounded-full border-2 border-archiBlack/20 flex items-center justify-center">
-              <div class="w-2 h-2 rounded-full bg-archiBlack/30"></div>
-            </div>
-            <p class="text-sm md:text-base font-medium text-archiBlack">{problem}</p>
+    <div class="grid gap-4 md:grid-cols-3">
+      {problems.map((problem, i) => (
+        <article class="group rounded-[2rem] border border-black/[0.08] bg-archiWhite p-7 shadow-card transition-transform duration-200 hover:-translate-y-1">
+          <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-2xl bg-archiBlue/[0.10] text-sm font-black text-archiBlue">
+            {String(i + 1).padStart(2, '0')}
           </div>
-        ))}
-      </div>
+          <h3 class="mb-4 text-2xl font-black tracking-[-0.04em] text-archiBlack">{problem.title}</h3>
+          <p class="leading-relaxed text-archiBlack/[0.62]">{problem.text}</p>
+        </article>
+      ))}
     </div>
   </div>
 </section>

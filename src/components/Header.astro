@@ -1,59 +1,56 @@
 ---
+const navLinks = [
+  { label: 'Problem', href: '#problem' },
+  { label: 'System', href: '#system' },
+  { label: 'Zakres', href: '#zakres' },
+  { label: 'Efekty', href: '#efekty' },
+  { label: 'Proces', href: '#proces' },
+  { label: 'FAQ', href: '#faq' },
+];
 ---
 
 <header
   id="site-header"
-  class="sticky top-0 z-50 bg-archiBg/95 backdrop-blur-sm border-b border-black/10 transition-all duration-300"
+  class="sticky top-0 z-50 border-b border-archiWhite/[0.08] bg-archiDark/[0.88] backdrop-blur-xl transition-all duration-300"
 >
-  <div class="container-narrow flex items-center justify-between h-16 md:h-18">
-    <!-- Logo -->
-    <a href="#" class="text-xl font-display font-bold text-archiBlack tracking-tight hover:text-archiBlue transition-colors">
-      Archimedia
+  <div class="container-narrow flex h-[4.75rem] items-center justify-between">
+    <a href="#" class="flex items-center gap-3 rounded-2xl bg-archiWhite px-3.5 py-2.5 transition-transform duration-200 hover:-translate-y-0.5" aria-label="Archimedia">
+      <img src="/assets/archimedia-symbol.png" alt="" class="h-8 w-8" />
+      <span class="text-sm font-black uppercase tracking-[0.08em] text-archiBlack">Archimedia</span>
     </a>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden lg:flex items-center gap-7">
-      <a href="#problem" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Problem</a>
-      <a href="#system" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">System</a>
-      <a href="#dla-kogo" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Dla kogo</a>
-      <a href="#efekty" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Efekty</a>
-      <a href="#proces" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Proces</a>
-      <a href="#faq" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">FAQ</a>
-      <a href="#kontakt" class="text-sm font-medium text-archiBlack/70 hover:text-archiBlue transition-colors">Kontakt</a>
+    <nav class="hidden items-center gap-1 lg:flex">
+      {navLinks.map((link) => (
+        <a href={link.href} class="rounded-full px-4 py-2 text-sm font-semibold text-archiWhite/[0.66] transition-colors hover:bg-archiWhite/[0.07] hover:text-archiWhite">
+          {link.label}
+        </a>
+      ))}
     </nav>
 
-    <!-- CTA Desktop -->
-    <a href="#kontakt" class="hidden lg:inline-flex btn-primary text-sm">
+    <a href="#kontakt" class="hidden lg:inline-flex btn-primary px-6 py-3 text-sm">
       Umów konsultację
     </a>
 
-    <!-- Mobile hamburger -->
     <button
       id="menu-toggle"
       aria-label="Otwórz menu"
       aria-expanded="false"
-      class="lg:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-black/5 transition-colors"
+      class="flex flex-col gap-1.5 rounded-xl border border-archiWhite/[0.10] bg-archiWhite/[0.06] p-3 transition-colors hover:bg-archiWhite/[0.10] lg:hidden"
     >
-      <span class="menu-line block w-6 h-0.5 bg-archiBlack transition-all duration-300"></span>
-      <span class="menu-line block w-6 h-0.5 bg-archiBlack transition-all duration-300"></span>
-      <span class="menu-line block w-4 h-0.5 bg-archiBlack transition-all duration-300"></span>
+      <span class="menu-line block h-0.5 w-6 bg-archiWhite transition-all duration-300"></span>
+      <span class="menu-line block h-0.5 w-6 bg-archiWhite transition-all duration-300"></span>
+      <span class="menu-line block h-0.5 w-4 bg-archiWhite transition-all duration-300"></span>
     </button>
   </div>
 
-  <!-- Mobile menu -->
-  <div
-    id="mobile-menu"
-    class="lg:hidden hidden border-t border-black/10 bg-archiBg"
-  >
-    <nav class="container-narrow flex flex-col py-6 gap-4">
-      <a href="#problem" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Problem</a>
-      <a href="#system" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">System</a>
-      <a href="#dla-kogo" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Dla kogo</a>
-      <a href="#efekty" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Efekty</a>
-      <a href="#proces" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Proces</a>
-      <a href="#faq" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">FAQ</a>
-      <a href="#kontakt" class="mobile-nav-link text-base font-medium text-archiBlack/80 hover:text-archiBlue transition-colors py-1">Kontakt</a>
-      <a href="#kontakt" class="btn-primary mt-2 text-sm w-full text-center">Umów konsultację</a>
+  <div id="mobile-menu" class="hidden border-t border-archiWhite/[0.08] bg-archiDark lg:hidden">
+    <nav class="container-narrow flex flex-col gap-2 py-5">
+      {navLinks.map((link) => (
+        <a href={link.href} class="mobile-nav-link rounded-2xl px-4 py-3 text-base font-semibold text-archiWhite/[0.76] transition-colors hover:bg-archiWhite/[0.07] hover:text-archiWhite">
+          {link.label}
+        </a>
+      ))}
+      <a href="#kontakt" class="btn-primary mt-2 w-full text-center text-sm">Umów konsultację</a>
     </nav>
   </div>
 </header>
@@ -63,29 +60,27 @@
   const menu = document.getElementById('mobile-menu');
   const lines = document.querySelectorAll('.menu-line');
 
+  function closeMenu() {
+    menu?.classList.add('hidden');
+    toggle?.setAttribute('aria-expanded', 'false');
+    lines[0]?.classList.remove('translate-y-2', 'rotate-45');
+    lines[1]?.classList.remove('opacity-0');
+    lines[2]?.classList.remove('-translate-y-2', '-rotate-45', 'w-6');
+  }
+
   toggle?.addEventListener('click', () => {
     const isOpen = menu?.classList.toggle('hidden') === false;
     toggle.setAttribute('aria-expanded', String(isOpen));
 
-    if (isOpen) {
-      lines[0]?.classList.add('translate-y-2', 'rotate-45');
-      lines[1]?.classList.add('opacity-0');
-      lines[2]?.classList.add('-translate-y-2', '-rotate-45', 'w-6');
-    } else {
-      lines[0]?.classList.remove('translate-y-2', 'rotate-45');
-      lines[1]?.classList.remove('opacity-0');
-      lines[2]?.classList.remove('-translate-y-2', '-rotate-45', 'w-6');
-    }
+    lines[0]?.classList.toggle('translate-y-2', isOpen);
+    lines[0]?.classList.toggle('rotate-45', isOpen);
+    lines[1]?.classList.toggle('opacity-0', isOpen);
+    lines[2]?.classList.toggle('-translate-y-2', isOpen);
+    lines[2]?.classList.toggle('-rotate-45', isOpen);
+    lines[2]?.classList.toggle('w-6', isOpen);
   });
 
-  // Close mobile menu on nav link click
   document.querySelectorAll('.mobile-nav-link').forEach((link) => {
-    link.addEventListener('click', () => {
-      menu?.classList.add('hidden');
-      toggle?.setAttribute('aria-expanded', 'false');
-      lines[0]?.classList.remove('translate-y-2', 'rotate-45');
-      lines[1]?.classList.remove('opacity-0');
-      lines[2]?.classList.remove('-translate-y-2', '-rotate-45', 'w-6');
-    });
+    link.addEventListener('click', closeMenu);
   });
 </script>

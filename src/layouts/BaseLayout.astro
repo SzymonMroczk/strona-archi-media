@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title?: string;
   description?: string;
@@ -6,9 +8,9 @@ interface Props {
 }
 
 const {
-  title = 'Archimedia | Klienci dla architektów wnętrz z Meta Ads',
-  description = 'Archimedia pomaga architektom wnętrz pozyskiwać klientów dzięki kampaniom Meta Ads, procesowi sprzedaży i lepszej obsłudze leadów.',
-  keywords = 'marketing dla architektów wnętrz, reklama dla architektów wnętrz, klienci dla projektanta wnętrz, Meta Ads dla architektów wnętrz, Facebook Ads dla architektów wnętrz, Instagram Ads dla projektantów wnętrz, pozyskiwanie klientów dla architekta wnętrz, sprzedaż usług projektowania wnętrz',
+  title = 'Archimedia | Klienci dla architektów wnętrz',
+  description = 'Archimedia pomaga architektom wnętrz pozyskiwać klientów przez Meta Ads, sprzedaż, CRM i proces obsługi leadów.',
+  keywords = 'marketing dla architektów wnętrz, reklama dla architektów wnętrz, klienci dla projektanta wnętrz, Meta Ads dla architektów wnętrz, pozyskiwanie klientów dla architekta wnętrz, sprzedaż usług projektowania wnętrz',
 } = Astro.props;
 ---
 
@@ -20,29 +22,30 @@ const {
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <meta name="author" content="Szymon Mroczkowski" />
+    <meta name="theme-color" content="#050608" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pl_PL" />
     <meta property="og:site_name" content="Archimedia" />
+    <meta property="og:image" content="/assets/archimedia-logo.png" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
     <title>{title}</title>
 
+    <link rel="icon" type="image/png" href="/assets/archimedia-symbol.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-archiBg text-archiBlack">
+  <body>
     <slot />
   </body>
 </html>

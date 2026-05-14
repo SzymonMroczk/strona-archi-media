@@ -1,81 +1,110 @@
 ---
+const tags = ['Meta Ads', 'Sprzedaż', 'CRM', 'Proces leadów'];
+const metrics = [
+  { value: '80+', label: 'wdrożeń w branży wnętrz' },
+  { value: '1 system', label: 'marketing, sprzedaż i obsługa' },
+  { value: '0 chaosu', label: 'w leadach i follow upach' },
+];
+const pipeline = [
+  { step: '01', label: 'Strategia', sub: 'grupa docelowa i oferta' },
+  { step: '02', label: 'Kampania', sub: 'formularz i komunikaty' },
+  { step: '03', label: 'Kontakt', sub: 'szybki odzew do leada' },
+  { step: '04', label: 'Sprzedaż', sub: 'rozmowa i kwalifikacja' },
+  { step: '05', label: 'Umowa', sub: 'projekt wnętrza zamiast samego zapytania' },
+];
 ---
 
-<section class="section-padding bg-archiBg pt-16 md:pt-24 overflow-hidden">
-  <div class="container-narrow">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <!-- Left content -->
+<section class="relative overflow-hidden bg-archiDark bg-archi-radial pt-16 md:pt-24">
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-archiBlue/70 to-transparent"></div>
+  <div class="absolute -left-32 top-24 h-72 w-72 rounded-full bg-archiBlue/20 blur-3xl"></div>
+  <div class="absolute right-0 top-36 h-96 w-96 rounded-full bg-archiBlue/10 blur-3xl"></div>
+
+  <div class="container-narrow relative pb-20 pt-10 md:pb-28 lg:pt-16">
+    <div class="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
       <div>
-        <!-- Tags -->
-        <div class="flex flex-wrap gap-2 mb-8">
-          {['Marketing w branży architektonicznej', 'Meta Ads', 'Sprzedaż', 'Leady', 'Proces'].map((tag) => (
-            <span class="text-xs font-medium bg-archiBlue/10 text-archiBlue px-3 py-1 rounded-full">
+        <div class="mb-7 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span class="rounded-full border border-archiWhite/[0.10] bg-archiWhite/[0.06] px-3.5 py-2 text-xs font-bold uppercase tracking-[0.16em] text-archiWhite/[0.72] backdrop-blur">
               {tag}
             </span>
           ))}
         </div>
 
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1] text-archiBlack mb-6">
-          Pozyskuj klientów do pracowni wnętrz w bardziej przewidywalny sposób
+        <h1 class="mb-7 max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.07em] text-archiWhite md:text-7xl lg:text-8xl">
+          Przewidywalny system pozyskiwania klientów dla pracowni wnętrz
         </h1>
 
-        <p class="section-subheading mb-10 max-w-xl">
-          Archimedia pomaga architektom wnętrz uruchomić kampanie leadowe Meta Ads, uporządkować sprzedaż i zamieniać zapytania w podpisane umowy na projekty wnętrz.
+        <p class="section-subheading-dark mb-9 max-w-2xl">
+          Archimedia łączy kampanie Meta Ads, sprzedaż, CRM i analizę rozmów, żeby Twoja pracownia nie była zależna wyłącznie od poleceń.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="#kontakt" class="btn-primary text-base">
+        <div class="mb-10 flex flex-col gap-3 sm:flex-row">
+          <a href="#kontakt" class="btn-primary">
             Umów konsultację strategiczną
           </a>
-          <a href="#system" class="btn-secondary text-base">
-            Zobacz system działania
+          <a href="#system" class="btn-secondary">
+            Zobacz jak działa system
           </a>
+        </div>
+
+        <div class="grid gap-3 sm:grid-cols-3">
+          {metrics.map((metric) => (
+            <div class="rounded-3xl border border-archiWhite/[0.08] bg-archiWhite/[0.04] p-5 backdrop-blur">
+              <p class="text-2xl font-black tracking-[-0.04em] text-archiWhite">{metric.value}</p>
+              <p class="mt-1 text-sm leading-snug text-archiWhite/[0.52]">{metric.label}</p>
+            </div>
+          ))}
         </div>
       </div>
 
-      <!-- Right: Process mockup card -->
-      <div class="relative flex justify-center lg:justify-end">
-        <div class="w-full max-w-sm bg-archiWhite rounded-3xl border border-black/10 p-8 shadow-xl shadow-black/5">
-          <p class="text-xs font-semibold uppercase tracking-widest text-archiBlack/40 mb-6">System Archimedia</p>
-
-          <div class="flex flex-col gap-3">
-            {[
-              { step: '01', label: 'Reklama', sub: 'Facebook & Instagram Ads' },
-              { step: '02', label: 'Formularz', sub: 'Zbieranie zgłoszeń' },
-              { step: '03', label: 'Kontakt', sub: 'Szybki odzew do leada' },
-              { step: '04', label: 'Rozmowa', sub: 'Kwalifikacja i sprzedaż' },
-              { step: '05', label: 'Oferta', sub: 'Prezentacja i negocjacje' },
-              { step: '06', label: 'Umowa', sub: 'Podpisanie projektu' },
-            ].map((item, i) => (
-              <div class="flex items-center gap-4 group">
-                <div class="flex-shrink-0 w-9 h-9 rounded-xl bg-archiBlue/10 flex items-center justify-center">
-                  <span class="text-xs font-bold text-archiBlue">{item.step}</span>
-                </div>
-                <div class="flex-1 flex items-center justify-between">
-                  <div>
-                    <p class="text-sm font-semibold text-archiBlack">{item.label}</p>
-                    <p class="text-xs text-archiBlack/50">{item.sub}</p>
-                  </div>
-                  {i < 5 && (
-                    <svg class="w-4 h-4 text-archiBlue/30 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
-                  {i === 5 && (
-                    <span class="text-xs font-semibold text-archiBlue bg-archiBlue/10 px-2.5 py-1 rounded-full">Cel</span>
-                  )}
-                </div>
-              </div>
-            ))}
+      <div class="relative">
+        <div class="absolute -inset-5 rounded-[2.5rem] bg-archiBlue/20 blur-3xl"></div>
+        <div class="relative overflow-hidden rounded-[2.2rem] border border-archiWhite/[0.12] bg-[#0b0d13]/[0.92] p-4 shadow-glow backdrop-blur-xl md:p-6">
+          <div class="mb-5 flex items-center justify-between rounded-3xl border border-archiWhite/[0.08] bg-archiWhite/[0.05] p-4">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-archiWhite/40">Panel wzrostu</p>
+              <p class="mt-1 text-lg font-black tracking-[-0.03em] text-archiWhite">Archimedia OS</p>
+            </div>
+            <div class="rounded-full bg-archiBlue px-3 py-1.5 text-xs font-extrabold text-archiWhite">Live</div>
           </div>
 
-          <div class="mt-6 pt-5 border-t border-black/8">
-            <p class="text-xs text-archiBlack/40 text-center">Celem nie jest reklama. Celem jest podpisana umowa.</p>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="rounded-3xl border border-archiWhite/[0.08] bg-archiWhite/[0.05] p-4">
+              <p class="text-xs text-archiWhite/[0.42]">Leady</p>
+              <p class="mt-2 text-3xl font-black tracking-[-0.05em] text-archiWhite">42</p>
+            </div>
+            <div class="rounded-3xl border border-archiWhite/[0.08] bg-archiWhite/[0.05] p-4">
+              <p class="text-xs text-archiWhite/[0.42]">Rozmowy</p>
+              <p class="mt-2 text-3xl font-black tracking-[-0.05em] text-archiWhite">18</p>
+            </div>
+            <div class="rounded-3xl border border-archiWhite/[0.08] bg-archiBlue p-4">
+              <p class="text-xs text-archiWhite/70">Oferty</p>
+              <p class="mt-2 text-3xl font-black tracking-[-0.05em] text-archiWhite">7</p>
+            </div>
+          </div>
+
+          <div class="mt-4 rounded-[1.8rem] border border-archiWhite/[0.08] bg-archiWhite/[0.04] p-4">
+            <div class="mb-4 flex items-center justify-between">
+              <p class="text-sm font-bold text-archiWhite">Ścieżka od reklamy do umowy</p>
+              <p class="text-xs text-archiWhite/40">5 etapów</p>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              {pipeline.map((item) => (
+                <div class="group flex items-center gap-3 rounded-2xl border border-archiWhite/[0.06] bg-archiDark/70 p-3 transition-colors hover:border-archiBlue/40">
+                  <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl bg-archiBlue/[0.14] text-xs font-black text-archiBlue">
+                    {item.step}
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <p class="text-sm font-extrabold text-archiWhite">{item.label}</p>
+                    <p class="truncate text-xs text-archiWhite/[0.45]">{item.sub}</p>
+                  </div>
+                  <div class="h-2 w-2 rounded-full bg-archiBlue"></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        <!-- Decorative element -->
-        <div class="absolute -z-10 top-1/2 right-0 -translate-y-1/2 w-72 h-72 bg-archiBlue/5 rounded-full blur-3xl"></div>
       </div>
     </div>
   </div>

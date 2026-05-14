@@ -2,26 +2,25 @@
 import { services } from '../data/services';
 ---
 
-<section class="section-padding bg-archiBg border-t border-black/8">
+<section id="zakres" class="section-padding bg-archiCream text-archiBlack">
   <div class="container-narrow">
-    <div class="max-w-2xl mb-12">
+    <div class="mb-14 max-w-3xl">
       <span class="section-label">Zakres</span>
-      <h2 class="section-heading mb-5">Co może obejmować współpraca?</h2>
+      <h2 class="section-heading mb-6">Nie dostajesz samej kampanii. Dostajesz system rozwoju pracowni.</h2>
+      <p class="section-subheading">
+        Zakres dopasowuję do etapu, na którym jesteś. Inaczej wygląda pierwsze źródło leadów, a inaczej skalowanie pracowni i budowanie zespołu.
+      </p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (
-        <div class="flex items-center gap-3 bg-archiWhite border border-black/10 rounded-xl px-5 py-4">
-          <div class="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-archiBlue"></div>
-          <p class="text-sm md:text-base font-medium text-archiBlack">{service}</p>
+        <div class="group flex items-center gap-4 rounded-3xl border border-black/[0.08] bg-archiWhite p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card">
+          <div class="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-2xl bg-archiBlue/[0.10]">
+            <div class="h-2 w-2 rounded-full bg-archiBlue"></div>
+          </div>
+          <p class="font-bold leading-snug text-archiBlack">{service}</p>
         </div>
       ))}
-    </div>
-
-    <div class="bg-archiBlue/8 border border-archiBlue/20 rounded-2xl p-7 max-w-3xl">
-      <p class="text-archiBlack/80 leading-relaxed">
-        Zakres współpracy zależy od tego, na jakim etapie jest Twoja pracownia. Inaczej wygląda pomoc przy pierwszym źródle leadów, a inaczej przy pracowni, która chce skalować sprzedaż i budować zespół.
-      </p>
     </div>
   </div>
 </section>
