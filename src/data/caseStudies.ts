@@ -12,7 +12,7 @@ export const caseStudies: CaseStudy[] = [
   {
     name: 'Karolina',
     type: 'Rozwijająca się pracownia',
-    context: 'Projektowanie ogrodów rozwijało się głównie przez polecenia, ale brakowało przewidywalnego źródła nowych rozmów.',
+    context: 'Przed rozpoczęciem współpracy, Karolina pozyskiwała klientów wyłącznie przez polecenia, przez co brakowało jej stabilności.',
     implementation: [
       'wdrożenie kampanii w social media',
       'formularz kwalifikujący zgłoszenia',
@@ -31,7 +31,7 @@ export const caseStudies: CaseStudy[] = [
       'kwalifikacja leadów przed rozmową',
       'analiza powodów utraty zapytań',
     ],
-    resultMetric: '109 280 zł',
+    resultMetric: '141 250 zł',
     resultLabel: 'wartość podpisanych umów w miesiąc',
     resultDescription: 'Zamiast pojedynczej akcji reklamowej powstał proces, który można analizować, poprawiać i skalować.',
   },
