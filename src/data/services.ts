@@ -18,7 +18,7 @@ export const services: string[] = [
 export const salesTrainingTopics: string[] = [
   'Jak szybko kontaktować się z potencjalnymi klientami',
   'Jak prowadzić pierwszą rozmowę',
-  'Jak kwalifikować klienta',
+  'Jak kwalifikować leada',
   'Jak odpowiadać na obiekcje',
   'Jak prowadzić do konsultacji',
   'Jak zwiększać szansę podpisania umowy',
