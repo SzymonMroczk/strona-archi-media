@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const instagramUrl = 'https://www.instagram.com/archi_media__/';
+const chatUrl = 'https://ig.me/m/archi_media__';
+
+// Po wrzuceniu filmu do Vimeo albo Wistia wklej tutaj link embed.
+// Vimeo przykład: https://player.vimeo.com/video/123456789
+// Wistia przykład: https://fast.wistia.net/embed/iframe/abc123xyz
+const videoEmbedUrl = '';
+
+const points = [
+  'Jak spojrzeć na pracownię jak na biznes, a nie tylko miejsce do projektowania',
+  'Jak przejść od poleceń do przewidywalnego pozyskiwania klientów',
+  'Jak połączyć marketing, sprzedaż, CRM i proces obsługi zapytań',
+];
+
+const steps = [
+  {
+    label: '01',
+    title: 'Obejrzyj wideo',
+    text: 'Zobacz, jakie elementy powinny działać razem, żeby pracownia nie była zależna wyłącznie od poleceń.',
+  },
+  {
+    label: '02',
+    title: 'Napisz do mnie',
+    text: 'Po obejrzeniu materiału odezwij się przez Instagram albo chat Archi Media i opisz, na jakim etapie jest Twoja pracownia.',
+  },
+];
+---
+
+<BaseLayout
+  title="15 minut, które odmieni Twoją pracownię | Archi Media"
+  description="Krótka lekcja wideo dla właścicieli pracowni wnętrz o marketingu, sprzedaży, CRM i procesie pozyskiwania klientów."
+>
+  <main class="min-h-screen overflow-hidden bg-archiDark text-archiWhite">
+    <section class="relative isolate px-4 py-6 sm:px-5 md:px-8 md:py-8">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_0%,rgba(82,102,233,0.34),transparent_34%),linear-gradient(135deg,#111948_0%,#050608_52%,#050608_100%)]"></div>
+      <div class="absolute left-1/2 top-20 -z-10 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-archiBlue/[0.14] blur-3xl"></div>
+
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-10 flex items-center justify-between gap-4 md:mb-16">
+          <a href="/" class="inline-flex items-center gap-3 rounded-2xl bg-archiWhite px-3.5 py-2.5 transition-transform duration-200 hover:-translate-y-0.5" aria-label="Archi Media">
+            <img src="/assets/archimedia-symbol.png" alt="" class="h-8 w-8" />
+            <span class="text-sm font-black uppercase tracking-[0.08em] text-archiBlack">Archi Media</span>
+          </a>
+
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="hidden rounded-full border border-archiWhite/[0.16] bg-archiWhite/[0.06] px-5 py-3 text-sm font-extrabold text-archiWhite/[0.86] transition-all duration-200 hover:-translate-y-0.5 hover:bg-archiWhite/[0.10] sm:inline-flex">
+            Instagram
+          </a>
+        </header>
+
+        <div class="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div>
+            <div class="mb-7 flex flex-wrap gap-3">
+              <span class="rounded-full border border-archiWhite/[0.14] bg-archiWhite/[0.08] px-5 py-3 text-xs font-black uppercase tracking-[0.22em] text-archiWhite/[0.66]">Meta Ads</span>
+              <span class="rounded-full border border-archiWhite/[0.14] bg-archiWhite/[0.08] px-5 py-3 text-xs font-black uppercase tracking-[0.22em] text-archiWhite/[0.66]">Sprzedaż</span>
+              <span class="rounded-full border border-archiWhite/[0.14] bg-archiWhite/[0.08] px-5 py-3 text-xs font-black uppercase tracking-[0.22em] text-archiWhite/[0.66]">CRM</span>
+            </div>
+
+            <p class="mb-5 text-sm font-black uppercase tracking-[0.22em] text-archiBlue">Lekcja wideo dla pracowni wnętrz</p>
+            <h1 class="max-w-4xl text-[3.25rem] font-black leading-[0.88] tracking-[-0.08em] text-archiWhite sm:text-7xl lg:text-[5.75rem]">
+              15 minut, które odmieni Twoją pracownię
+            </h1>
+            <p class="mt-7 max-w-2xl text-lg leading-relaxed text-archiWhite/[0.62] md:text-xl">
+              Zobacz, jak uporządkować pozyskiwanie klientów, sprzedaż i proces obsługi zapytań, żeby pracownia miała większą kontrolę nad wzrostem.
+            </p>
+
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="btn-primary w-full sm:w-auto">
+                Napisz na Instagramie
+              </a>
+              <a href={chatUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary w-full sm:w-auto">
+                Otwórz chat Archi Media
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-[2rem] border border-archiWhite/[0.10] bg-archiWhite/[0.06] p-3 shadow-glow backdrop-blur md:rounded-[2.6rem] md:p-5">
+            <div class="mb-4 flex items-center justify-between gap-4 px-2 pt-2 md:px-3">
+              <div>
+                <p class="text-xs font-black uppercase tracking-[0.20em] text-archiBlue">Krok 1 z 2</p>
+                <h2 class="mt-2 text-xl font-black tracking-[-0.04em] md:text-2xl">Obejrzyj wideo</h2>
+              </div>
+              <div class="hidden rounded-full bg-archiWhite/[0.08] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-archiWhite/[0.55] sm:block">VSL</div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[1.5rem] border border-archiWhite/[0.10] bg-archiBlack md:rounded-[2rem]">
+              <div class="aspect-video">
+                {videoEmbedUrl ? (
+                  <iframe
+                    src={videoEmbedUrl}
+                    title="15 minut, które odmieni Twoją pracownię"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    class="h-full w-full"
+                  ></iframe>
+                ) : (
+                  <div class="flex h-full w-full flex-col items-center justify-center bg-[radial-gradient(circle_at_50%_0%,rgba(82,102,233,0.30),transparent_48%),linear-gradient(135deg,#151a3a,#08090d)] px-6 text-center">
+                    <div class="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-archiBlue text-archiWhite shadow-glow">
+                      <svg class="ml-1 h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <p class="mb-3 text-xl font-black tracking-[-0.04em] md:text-2xl">Miejsce na Twoje wideo</p>
+                    <p class="max-w-md text-sm leading-relaxed text-archiWhite/[0.52]">
+                      Po wrzuceniu filmu do Vimeo albo Wistia wklej link embed w pliku src/pages/15-minut.astro.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-archiBg px-4 py-16 text-archiBlack sm:px-5 md:px-8 md:py-24">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+        <div class="lg:sticky lg:top-10">
+          <p class="mb-4 text-sm font-black uppercase tracking-[0.22em] text-archiBlue">Co znajdziesz w środku</p>
+          <h2 class="text-4xl font-black leading-[0.95] tracking-[-0.06em] md:text-6xl">To nie jest długa strona sprzedażowa.</h2>
+          <p class="mt-6 text-lg leading-relaxed text-archiBlack/[0.62]">
+            To krótka lekcja, która ma pokazać Ci kierunek rozwoju pracowni i pomóc zdecydować, czy warto porozmawiać o wdrożeniu podobnego systemu u Ciebie.
+          </p>
+        </div>
+
+        <div class="grid gap-4">
+          {points.map((point) => (
+            <div class="flex gap-4 rounded-[2rem] border border-black/[0.08] bg-archiWhite p-5 shadow-card md:p-6">
+              <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-archiBlue text-archiWhite">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <p class="pt-1 text-lg font-extrabold leading-snug tracking-[-0.03em] text-archiBlack md:text-xl">{point}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-archiDark px-4 py-16 text-archiWhite sm:px-5 md:px-8 md:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-10 text-center">
+          <p class="mb-4 text-sm font-black uppercase tracking-[0.22em] text-archiBlue">Krok 2 z 2</p>
+          <h2 class="mx-auto max-w-3xl text-4xl font-black leading-[0.95] tracking-[-0.06em] md:text-6xl">Po obejrzeniu napisz do mnie.</h2>
+          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-archiWhite/[0.62]">
+            Nie ma tutaj formularza ani kalendarza. Najprościej będzie, jeśli odezwiesz się bezpośrednio i krótko opiszesz swoją sytuację.
+          </p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          {steps.map((step) => (
+            <article class="rounded-[2rem] border border-archiWhite/[0.10] bg-archiWhite/[0.055] p-6 backdrop-blur md:p-8">
+              <div class="mb-8 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-archiBlue text-sm font-black text-archiWhite">{step.label}</div>
+              <h3 class="mb-4 text-2xl font-black tracking-[-0.05em] text-archiWhite">{step.title}</h3>
+              <p class="leading-relaxed text-archiWhite/[0.60]">{step.text}</p>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-8 rounded-[2.4rem] border border-archiWhite/[0.10] bg-archiWhite/[0.06] p-6 text-center shadow-glow md:p-10">
+          <h3 class="mx-auto mb-4 max-w-2xl text-3xl font-black leading-[0.96] tracking-[-0.06em] md:text-5xl">Chcesz sprawdzić, co można poprawić w Twojej pracowni?</h3>
+          <p class="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-archiWhite/[0.62] md:text-lg">
+            Napisz do Archi Media. Odpowiem i podpowiem, jaki kolejny krok ma największy sens.
+          </p>
+          <div class="flex flex-col justify-center gap-3 sm:flex-row">
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="btn-primary w-full sm:w-auto">
+              Napisz na Instagramie
+            </a>
+            <a href={chatUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary w-full sm:w-auto">
+              Otwórz chat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-archiWhite/[0.08] bg-archiDark px-4 py-8 text-archiWhite sm:px-5 md:px-8">
+      <div class="mx-auto flex max-w-6xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <a href="/" class="inline-flex items-center gap-3 rounded-2xl bg-archiWhite px-3.5 py-2.5" aria-label="Archi Media">
+          <img src="/assets/archimedia-symbol.png" alt="" class="h-8 w-8" />
+          <span class="text-sm font-black uppercase tracking-[0.08em] text-archiBlack">Archi Media</span>
+        </a>
+        <p class="text-sm font-semibold text-archiWhite/[0.45]">Marketing, sprzedaż i system pozyskiwania klientów dla pracowni.</p>
+      </div>
+    </footer>
+  </main>
+</BaseLayout>
